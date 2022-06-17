@@ -16,19 +16,22 @@ const startegies = {
 
 //策略模式
 const Validator = function () {
-    this.cache = []
+    this.cache = [];
+    this.cacheMsg = ''
 }
 
-Validator.prototype.add = function (dom, rule, errorMsg) {
-    startegies[rule].apply(this, ary)
-    this.cache.push()
+Validator.prototype.add = function (value, rule, errorMsg) {
+    //把参数拼接一下，人民城市入 startegies
+    const cacheFn = startegies[rule].apply(this, [value, errorMsg])
+    this.cache.push(cacheFn)
 }
 
 Validator.prototype.start = function () {
-    for (let i = 0, validatorFun; validatorFun = this.cache[i++];) {
-        let msg = validatorFun()
-        if (msg) return msg
+    for (let i = 0; i < this.cache.length; i++) {
+        let msg = this.cache[i]()
+        if (msg) this.cacheMsg += msg;
     }
+    return this.cacheMsg
 }
 
 //添加验证
