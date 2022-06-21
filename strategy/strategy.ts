@@ -1,21 +1,21 @@
 /**
  * 避免多重条件选择语句
  */
-const S = (salary) =>{
+const S = (salary) => {
     return salary * 4;
 }
-const A = (salary) =>{
+const A = (salary) => {
     return salary * 3;
 }
-const B = (salary) =>{
+const B = (salary) => {
     return salary * 2;
 }
 
-const calculateBonus = (fun, salary)=>{
+const calculateBonus = (fun, salary) => {
     return fun(salary)
 }
 
-calculateBonus(S,100)
+calculateBonus(S, 100)
 
 
 
