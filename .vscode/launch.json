@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/strategy/validator.ts"
+      "program": "${workspaceFolder}/strategy/form.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
