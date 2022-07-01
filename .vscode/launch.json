@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/iterators/each.ts"
+      "program": "${workspaceFolder}/trigger/event.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
