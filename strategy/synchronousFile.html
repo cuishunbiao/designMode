@@ -8,18 +8,26 @@
     <title>Document</title>
 </head>
 
+<input type="checkbox" id="check" value="1" class="">
+<input type="checkbox" id="check" value="2" class="">
+<input type="checkbox" id="check" value="3" class="">
+<input type="checkbox" id="check" value="4" class="">
+<input type="checkbox" id="check" value="5" class="">
+<input type="checkbox" id="check" value="6" class="">
+<input type="checkbox" id="check" value="7" class="">
+
 <body>
 
     <script>
         /**
- * 收集2秒中选中的 checkbox 实现。
- * 三个方法；
- * 
- * 一个打印；
- * 一个收集；
- * 一个绑定；
- * 
- */
+         * 收集2秒中选中的 checkbox 实现。
+         * 三个方法；
+         * 
+         * 一个打印；
+         * 一个收集；
+         * 一个绑定；
+         * 
+         */
         //打印
         const synchronousFile = function (id) {
             console.log(`开始同步文件${id}`)
@@ -43,8 +51,9 @@
 
         for (let i = 0, c; c = checkbox[i++];) {
             c.onclick = function () {
+                debugger
                 if (this.checked) {
-                    proxySynchronousFile(this.id)
+                    proxySynchronousFile(this.value)
                 }
             }
         }
